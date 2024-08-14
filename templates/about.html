@@ -13,7 +13,58 @@
 {% endblock %} {%block title %} RiceClassify {% endblock %} {% block content %}
 <h1 class="mt-5">Tentang</h1>
 <div class="main-content d-flex flex-column mt-5">
-	<h2>Teknologi</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-3 mb-3">
+				<img
+					src="{{ url_for('static', filename='images/Me.jpg') }}"
+					alt="Foto Saya"
+					class="img-fluid rounded"
+				/>
+			</div>
+			<div class="col-12 col-md-8">
+				<p>
+					<span class="fw-bold">Nunung Ali Maulana</span> atau yang biasa
+					dipanggil Nunung atau Ali adalah seorang
+					<span class="fst-italic">freshgraduate</span> Program Studi Teknik
+					Informatika, FMIPA, Universitas Negeri Semarang. Dengan
+					ketertarikannya pada bidang teknologi, saya memiliki pengalaman dalam
+					bidang
+					<span class="fw-semibold fst-italic">Back End Developer</span> dengan
+					bahasa pemrograman <i>Javascript</i> dan <i>Python</i>.
+				</p>
+				<ul class="d-flex align-items-start flex-column fs-5">
+					<li>
+						Linkedin:
+						<a
+							href="https://www.linkedin.com/in/nunung-ali-maulana/"
+							target="black"
+							>Nunung Ali Maulana</a
+						>
+					</li>
+					<li>
+						Github:
+						<a href="https://github.com/mynamss" target="black"
+							>nunungalimaulana_</a
+						>
+					</li>
+					<li>
+						Instagram:
+						<a href="https://www.instagram.com/mynamss_/" target="black"
+							>mynamss</a
+						>
+					</li>
+					<li>
+						Facebook:
+						<a href="https://facebook.com/nunungalimaulana" target="black"
+							>Nunung Ali Maulana</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- <h2>Teknologi</h2>
 	<p>Website :</p>
 	<div class="d-flex justify-content-center gap-3 logo mb-5">
 		<a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">
@@ -36,9 +87,7 @@
 		<p>Robust Scaler</p>
 		<p>-</p>
 		<p>RandomizedSearch CV</p>
-	</div>
-	<h2 class="mt-5">Creator</h2>
-	<p>Nama: Nunung Ali Maulana</p>
+	</div> -->
 </div>
 
 {% endblock %}

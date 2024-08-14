@@ -1,11 +1,41 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {%block title %} RiceClassify {% endblock %} {%block
+head %} {{ super() }}
+<style>
+	/* Membatasi tinggi tabel dan membuatnya bisa di-scroll */
+	.table-wrapper {
+		max-height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+		overflow-y: auto;
+	}
 
-{%block title %} RiceClassify {% endblock %}
+	p {
+		text-align: justify;
+		color: #1a4d2e;
+	}
+</style>
 
-{% block content %}
-    <h1 class="mt-5">Dataset Varietas Beras</h1>
-    <p>Berikut adalah sampel data dari dataset yang digunakan:</p>
-    <div>
-        {{ tables|safe }}
-    </div>
+{% endblock %} {% block content %}
+<h1 class="mt-5">Dataset Varietas Beras</h1>
+<p class="mt-3 fs-5">
+	FYI, Dataset yang mimin pakai didapat dari
+	<span class="fw-semibold fst-italic">Kaggle</span> dan bisa kamu akses
+	<a
+		href="https://www.kaggle.com/datasets/muratkokludataset/rice-dataset-commeo-and-osmancik"
+		target="_blank"
+		>disini</a
+	>. Singkatnya, dataset ini punya 7 fitur dan 2 kelas (varietas), yaitu
+	<span class="fw-semibold">Cammeo</span> dan
+	<span class="fw-semibold">Osmancik</span>.Oke, biar lebih detail, kamu bisa
+	cek datasetnya yang udah mimin sediain di tabel ini.
+</p>
+<div class="table-wrapper">{{ table|safe }}</div>
+
+<p class="d-flex justify-content-center mt-5 fs-5">Tertarik dengan dataset ini dan mau mencoba ?</p>
+<div class="mt-4">
+	<a
+		href="{{ url_for('static', filename='dataset/Rice_Cammeo_Osmancik.xlsx') }}"
+		download
+		class="btn btn-outline-success"
+		>Download Dataset</a
+	>
+</div>
 {% endblock %}
