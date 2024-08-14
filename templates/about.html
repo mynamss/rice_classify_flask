@@ -1,0 +1,44 @@
+{% extends "base.html" %} {%block head%} {{ super() }}
+<style>
+	p {
+		font-size: 22px;
+		text-align: justify;
+	}
+	img {
+		width: fit-content;
+		height: 7rem;
+	}
+</style>
+
+{% endblock %} {%block title %} RiceClassify {% endblock %} {% block content %}
+<h1 class="mt-5">Tentang</h1>
+<div class="main-content d-flex flex-column mt-5">
+	<h2>Teknologi</h2>
+	<p>Website :</p>
+	<div class="d-flex justify-content-center gap-3 logo mb-5">
+		<a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">
+			<img
+				src="{{ url_for('static', filename='images/Flask_logo.svg') }}"
+				alt="Flask Logo"
+			/>
+		</a>
+		<a href="https://getbootstrap.com/" target="_blank">
+			<img
+				src="{{ url_for('static', filename='images/Bootstrap_logo.svg') }}"
+				alt="Flask Logo"
+			/>
+		</a>
+	</div>
+	<p>Machine Learning :</p>
+	<div class="ml-tech d-flex justify-content-center flex-row gap-4 fw-bold">
+		<p>Algoritma K-Nearest Neighbors</p>
+		<p>-</p>
+		<p>Robust Scaler</p>
+		<p>-</p>
+		<p>RandomizedSearch CV</p>
+	</div>
+	<h2 class="mt-5">Creator</h2>
+	<p>Nama: Nunung Ali Maulana</p>
+</div>
+
+{% endblock %}

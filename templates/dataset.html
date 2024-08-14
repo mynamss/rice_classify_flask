@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{%block title %} RiceClassify {% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">Dataset Varietas Beras</h1>
+    <p>Berikut adalah sampel data dari dataset yang digunakan:</p>
+    <div>
+        {{ tables|safe }}
+    </div>
+{% endblock %}

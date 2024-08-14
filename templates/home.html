@@ -1,0 +1,39 @@
+{% extends "base.html" %} {%block title %} RiceClassify {% endblock %} {%block
+head%} {{ super() }}
+<style>
+	p {
+		text-align: justify;
+		color: #1a4d2e;
+	}
+
+	.title {
+		color: #1a4d2e;
+	}
+</style>
+{% endblock %} {% block content %}
+<img
+	class="mt-n5"
+	src="{{ url_for('static', filename='images/rice_2.jpg') }}"
+	alt="Deskripsi Gambar"
+/>
+<h1 class="title mt-4"><strong>RiceClassify</strong></h1>
+<p class="mt-3 fs-5">
+	Hai 👋, Selamat Datang di
+	<span class="fw-semibold fst-italic">RiceClassify!</span> Website yang dapat
+	membantumu mengklasifikasikan beras ke dalam 2 varietas, yaitu
+	<span class="fst-italic">Cammeo</span> dan
+	<span class="fst-italic">Osmancik</span> dengan mudah.
+	<span class="fst-italic">By the way</span>, model yang digunakan pada website
+	ini dibangun dengan
+	<span class="fw-semibold fst-italic"
+		>Algoritma K-Nearest Neighbors(KNN), Robust Scaler, dan RandomizedSearch
+		CV</span
+	>. Lebih jelas tentang teknologi yang dipakai, kamu bisa cek di halaman
+	<a class="fw-medium text-decoration-none" href="/tentang">Tentang</a>. Yuk,
+	tunggu apalagi! Ayo <span class="fw-medium">Mulai Klasifikasi</span>.
+</p>
+
+<button type="button" class="btn btn-outline-success mt-3 px-5">
+	<a href="/klasifikasi" class="text-decoration-none">Mulai Klasifikasi</a>
+</button>
+{% endblock %}
