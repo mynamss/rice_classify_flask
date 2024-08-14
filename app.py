@@ -11,8 +11,6 @@ app = Flask(__name__)
 knn_model = pickle.load(open('models/knn_best_model.pkl', 'rb'))
 scaler_model = pickle.load(open('models/robust_scaler_model.pkl', 'rb'))
 
-# Load dataset untuk ditampilkan di halaman Dataset
-df = pd.read_excel("Rice_Cammeo_Osmancik.xlsx")
 
 @app.route('/')
 def home():
@@ -20,8 +18,11 @@ def home():
 
 @app.route('/dataset')
 def dataset():
-    sample_data = df.head(10)  # Ambil 10 sampel data
-    return render_template('dataset.html', tables=[sample_data.to_html(classes='data', header="true")])
+    # Load dataset untuk ditampilkan di halaman Dataset
+    df = pd.read_excel("static/dataset/Rice_Cammeo_Osmancik.xlsx")
+    
+    data_html = df.to_html(classes='table table-striped', index=True)
+    return render_template('dataset.html', table=data_html)
 
 @app.route('/klasifikasi', methods=['GET', 'POST'])
 def classify():
